@@ -16,4 +16,4 @@ WORKDIR /app/ui
 RUN npm install
 
 # Start both the API and UI in development mode
-CMD ["sh", "-c", "npm run dev --prefix /app/server & npm run dev --prefix /app/ui"]
+CMD ["sh", "-c", "npm run dev --prefix /app/server & npm run dev --prefix /app/ui & npm run storybook --prefix /app/ui"]

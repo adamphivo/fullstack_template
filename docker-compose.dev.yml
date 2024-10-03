@@ -8,8 +8,10 @@ services:
     ports:
       - ${SERVER_PORT}:3000
       - ${UI_PORT}:5173
+      - ${STORYBOOK_PORT}:6006
     environment:
       - NODE_ENV=development
+      - TZ=${TZ}
     volumes:
       - ./server/src:/app/server/src
       - ./ui/src:/app/ui/src
