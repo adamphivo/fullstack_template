@@ -10,3 +10,5 @@ services:
       - ${OUTER_UI_PORT}:5173
     environment:
       - NODE_ENV=development
+    volumes:
+      - .:/app
