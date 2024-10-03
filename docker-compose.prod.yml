@@ -15,3 +15,27 @@ services:
     volumes:
       - ./server/src:/app/server/src
       - ./ui/src:/app/ui/src
+  db:
+    image: postgres
+    container_name: ${CONTAINER_NAME}_db_prod
+    restart: no
+    shm_size: 128mb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${CONTAINER_NAME}
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    restart: no
+    depends_on:
+      - db
+    ports:
+      - ${ADMINER_PORT}:8080
+
+volumes:
+  postgres_data:

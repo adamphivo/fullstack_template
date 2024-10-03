@@ -1,5 +1,6 @@
 import CompareTime from "@/components/CompareTime/CompareTime";
 import Title from "@/components/Title/Title";
+import Users from "@/components/Users/Users";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -10,6 +11,7 @@ const router = createBrowserRouter([
         <Title />
         <CompareTime />
         <Outlet />
+        <Users />
       </>
     ),
     children: [

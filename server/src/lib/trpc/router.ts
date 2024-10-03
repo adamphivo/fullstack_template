@@ -1,4 +1,5 @@
 import { publicProcedure, router } from ".";
+import prisma from "../prisma";
 
 export const appRouter = router({
   getUser: publicProcedure.query(() => {
@@ -6,6 +7,9 @@ export const appRouter = router({
   }),
   getTime: publicProcedure.query(() => {
     return new Date().toLocaleTimeString();
+  }),
+  getUsers: publicProcedure.query(async () => {
+    return await prisma.user.findMany({});
   }),
 });
 
