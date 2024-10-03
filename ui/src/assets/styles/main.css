@@ -1,0 +1,8 @@
+/* Design System */
+:root {
+  --background: rgb(231, 231, 231);
+}
+
+body {
+  background-color: var(--background);
+}
