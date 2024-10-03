@@ -17,7 +17,8 @@
     "@trpc/react-query": "^11.0.0-rc.553",
     "@trpc/server": "^11.0.0-rc.553",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",

@@ -1,14 +1,11 @@
-import Title from "@/components/Title/Title";
-import CompareTime from "./components/CompareTime/CompareTime";
+import { RouterProvider } from "react-router-dom";
 import TrpcProvider from "./lib/trpc/TrpcProvider";
+import router from "./routes";
 
 function App() {
   return (
     <TrpcProvider>
-      <main>
-        <Title />
-        <CompareTime />
-      </main>
+      <RouterProvider router={router} />
     </TrpcProvider>
   );
 }
