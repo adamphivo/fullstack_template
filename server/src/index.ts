@@ -14,6 +14,6 @@ app.use(
   trpcExpress.createExpressMiddleware({ router: appRouter, createContext })
 );
 
-app.listen(process.env.SERVER_PORT, () => {
-  console.log(`Listening on ${process.env.SERVER_PORT}`);
+app.listen(3000, () => {
+  console.log(`🚀 Listening on port : 3000 !`);
 });

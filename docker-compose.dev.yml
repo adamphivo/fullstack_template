@@ -1,14 +1,15 @@
 services:
   main:
-    container_name: ${CONTAINER_NAME}
-    restart: unless-stopped
+    container_name: ${CONTAINER_NAME}_dev
+    restart: no
     build:
       context: .
       dockerfile: ./docker/DockerfileDev
     ports:
-      - ${OUTER_SERVER_PORT}:${SERVER_PORT}
-      - ${OUTER_UI_PORT}:5173
+      - ${SERVER_PORT}:3000
+      - ${UI_PORT}:5173
     environment:
       - NODE_ENV=development
     volumes:
-      - .:/app
+      - ./server/src:/app/server/src
+      - ./ui/src:/app/ui/src
